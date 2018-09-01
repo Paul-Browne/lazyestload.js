@@ -237,7 +237,6 @@ gulp.task('build', function(callback) {
 		'resize500',
 		'html',
 		'other',
-		'copyToDemo',
 		callback
 	)
 })
