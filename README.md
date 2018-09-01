@@ -49,3 +49,7 @@ img.lazyestload {
     filter: blur(8px);
 }
 ```
+
+
+
+I've added a placeholder generator. To use run `npm i` and then `npm build` you can also serve the demo locally with `npm bsw` (**b**uild, **s**erve, **w**atch)
