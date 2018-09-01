@@ -33,33 +33,33 @@
 
             if (yPositionTop <= offset && yPositionBottom >= -offset) {
 
-				// replace the src with the data-src      
+                // replace the src with the data-src      
 
-            	if(images[i].getAttribute("data-src")){
-            		images[i].src = images[i].getAttribute("data-src");
-            	}
+                if (images[i].getAttribute("data-src")) {
+                    images[i].src = images[i].getAttribute("data-src");
+                }
 
-            	// replace the srcset with the data-srcset  
+                // replace the srcset with the data-srcset  
 
-            	if(images[i].getAttribute("data-srcset")){
-            	    images[i].srcset = images[i].getAttribute("data-srcset");
-            	}
+                if (images[i].getAttribute("data-srcset")) {
+                    images[i].srcset = images[i].getAttribute("data-srcset");
+                }
 
-				// replace the source srcset's with the data-srcset's
+                // replace the source srcset's with the data-srcset's
 
-            	if(images[i].parentElement.tagName === "PICTURE"){
-            		var sources = images[i].parentElement.querySelectorAll("source");
-            		var j = sources.length;
-            		while(j--){
-            			sources[j].srcset = sources[j].getAttribute("data-srcset");
-            		}
-            	}
+                if (images[i].parentElement.tagName === "PICTURE") {
+                    var sources = images[i].parentElement.querySelectorAll("source");
+                    var j = sources.length;
+                    while (j--) {
+                        sources[j].srcset = sources[j].getAttribute("data-srcset");
+                    }
+                }
 
-            	// wait until the new image is loaded
+                // wait until the new image is loaded
 
-            	images[i].addEventListener('load', function() {
-            	    this.classList.remove("lazyestload");
-            	});
+                images[i].addEventListener('load', function() {
+                    this.classList.remove("lazyestload");
+                });
 
             }
         }

@@ -24,22 +24,22 @@
 
             if (yPosition <= offset) {
 
-                if(images[i].getAttribute("data-src")){
+                if (images[i].getAttribute("data-src")) {
                     images[i].src = images[i].getAttribute("data-src");
                 }
 
                 // replace the srcset with the data-srcset  
 
-                if(images[i].getAttribute("data-srcset")){
+                if (images[i].getAttribute("data-srcset")) {
                     images[i].srcset = images[i].getAttribute("data-srcset");
                 }
 
                 // replace the source srcset's with the data-srcset's
 
-                if(images[i].parentElement.tagName === "PICTURE"){
+                if (images[i].parentElement.tagName === "PICTURE") {
                     var sources = images[i].parentElement.querySelectorAll("source");
                     var j = sources.length;
-                    while(j--){
+                    while (j--) {
                         sources[j].srcset = sources[j].getAttribute("data-srcset");
                     }
                 }
