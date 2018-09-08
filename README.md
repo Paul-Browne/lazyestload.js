@@ -37,7 +37,7 @@ or with `picture` and `source`
 [demo lazyload](https://rawgit.com/Paul-Browne/lazyestload.js/master/dist/lazyload.html) load images only when they are in the viewport or 100px beneath
 
 
-When using placholders the image should be less than 1kb, ~40px wide, and should have the same aspect ratio as the image that will replace it. (to avoid any layout jank) Also the "blur up" affect in the first demo works by adding the following css.
+When using placeholders the image should be less than 1kb, ~40px wide, and should have the same aspect ratio as the image that will replace it. (to avoid any layout jank) Also the "blur up" affect in the first demo works by adding the following css.
 
 ```css
 img {
