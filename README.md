@@ -26,7 +26,7 @@ or with `picture` and `source`
 ```html
   <picture>
   	<source media="(max-width: 400px)" data-srcset="images/sunset-400.jpg" >
-  	<source media="(max-width: 401px)" data-srcset="images/sunset.jpg" >
+  	<source media="(min-width: 401px)" data-srcset="images/sunset.jpg" >
   	<img class="lazyestload" src="images/placeholder/sunset.jpg" >
   </picture>
 ```
